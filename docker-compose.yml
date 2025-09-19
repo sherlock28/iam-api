@@ -1,0 +1,13 @@
+services:
+  iam_api_service:
+    build:
+      target: final
+      context: .
+    container_name: iam_api_service
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ./src/Iam-api.API/appsettings.Development.json:/app/appsettings.json

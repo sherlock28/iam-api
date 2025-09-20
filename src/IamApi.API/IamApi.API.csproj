@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Iam-api.Application\Iam-api.Application.csproj" />
-    <ProjectReference Include="..\Iam-api.Infrastructure\Iam-api.Infrastructure.csproj" />
+    <ProjectReference Include="..\IamApi.Application\IamApi.Application.csproj" />
+    <ProjectReference Include="..\IamApi.Infrastructure\IamApi.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

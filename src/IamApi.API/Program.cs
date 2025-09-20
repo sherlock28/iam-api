@@ -1,6 +1,8 @@
-using Iam_api.API.Extensions;
-using Scalar.AspNetCore;
 using Serilog;
+using Scalar.AspNetCore;
+using IamApi.API.Extensions;
+using IamApi.Application.Extensions;
+using IamApi.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.AddPresentation();
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure(builder.Configuration);
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();

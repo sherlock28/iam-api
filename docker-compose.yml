@@ -10,4 +10,4 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     volumes:
-      - ./src/Iam-api.API/appsettings.Development.json:/app/appsettings.json
+      - ./src/IamApi.API/appsettings.Development.json:/app/appsettings.json

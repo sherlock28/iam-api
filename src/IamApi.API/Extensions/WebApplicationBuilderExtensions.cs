@@ -1,6 +1,6 @@
 using Serilog;
 
-namespace Iam_api.API.Extensions;
+namespace IamApi.API.Extensions;
 
 public static class WebApplicationBuilderExtensions
 {

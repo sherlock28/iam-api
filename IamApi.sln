@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IamApi.API", "src\IamApi.API\IamApi.API.csproj", "{DA7A6F19-59D2-D6F1-B0AC-F544094B2B9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IamApi.Domain", "src\IamApi.Domain\IamApi.Domain.csproj", "{9F1F212B-3CAD-2CDF-4B87-CCB9B22EE50D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IamApi.Infrastructure", "src\IamApi.Infrastructure\IamApi.Infrastructure.csproj", "{8948BCB2-E1F5-0B25-300A-7213E79C40F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IamApi.Application", "src\IamApi.Application\IamApi.Application.csproj", "{25103F98-9A68-8493-03E1-FB655B25CCC1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		changelog.md = changelog.md
+		docker-compose.yml = docker-compose.yml
+		Dockerfile = Dockerfile
+		nuget.config = nuget.config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA7A6F19-59D2-D6F1-B0AC-F544094B2B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA7A6F19-59D2-D6F1-B0AC-F544094B2B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA7A6F19-59D2-D6F1-B0AC-F544094B2B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA7A6F19-59D2-D6F1-B0AC-F544094B2B9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F1F212B-3CAD-2CDF-4B87-CCB9B22EE50D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F1F212B-3CAD-2CDF-4B87-CCB9B22EE50D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F1F212B-3CAD-2CDF-4B87-CCB9B22EE50D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F1F212B-3CAD-2CDF-4B87-CCB9B22EE50D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8948BCB2-E1F5-0B25-300A-7213E79C40F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8948BCB2-E1F5-0B25-300A-7213E79C40F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8948BCB2-E1F5-0B25-300A-7213E79C40F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8948BCB2-E1F5-0B25-300A-7213E79C40F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25103F98-9A68-8493-03E1-FB655B25CCC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25103F98-9A68-8493-03E1-FB655B25CCC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25103F98-9A68-8493-03E1-FB655B25CCC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25103F98-9A68-8493-03E1-FB655B25CCC1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

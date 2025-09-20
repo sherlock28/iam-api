@@ -1,4 +1,4 @@
-namespace Iam_api.Domain.Intefaces;
+namespace IamApi.Domain.Intefaces;
 
 public interface IMultiTenant
 {

@@ -2,8 +2,8 @@ using Mapster;
 using MapsterMapper;
 using SharpGrip.FluentValidation.AutoValidation.Mvc.Extensions;
 using Microsoft.Extensions.DependencyInjection;
-using Iam_api.Domain.Intefaces;
-using Iam_api.Application.Services;
+using IamApi.Domain.Intefaces;
+using IamApi.Application.Services;
 
 namespace IamApi.Application.Extensions;
 

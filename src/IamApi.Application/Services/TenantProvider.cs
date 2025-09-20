@@ -1,6 +1,6 @@
-using Iam_api.Domain.Intefaces;
+using IamApi.Domain.Intefaces;
 
-namespace Iam_api.Application.Services;
+namespace IamApi.Application.Services;
 
 public class TenantProvider : ITenantProvider
 {

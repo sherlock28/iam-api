@@ -1,5 +1,4 @@
-using Iam_api.Domain.Entities;
-using Iam_api.Domain.Intefaces;
+using IamApi.Domain.Intefaces;
 
 namespace IamApi.Domain.Entities;
 

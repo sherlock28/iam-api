@@ -1,9 +1,9 @@
 services:
-  iam_api_service:
+  iamapi_service:
     build:
       target: final
       context: .
-    container_name: iam_api_service
+    container_name: iamapi_service
     restart: always
     ports:
       - "5000:5000"

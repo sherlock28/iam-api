@@ -1,7 +1,7 @@
-using Iam_api.Domain.Intefaces;
 using IamApi.Domain.Entities;
+using IamApi.Domain.Intefaces;
 
-namespace Iam_api.Domain.Entities;
+namespace IamApi.Domain.Entities;
 
 public class Role : BaseEntity, IMultiTenant
 {

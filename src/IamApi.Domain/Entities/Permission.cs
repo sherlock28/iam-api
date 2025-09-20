@@ -1,6 +1,6 @@
 using IamApi.Domain.Entities;
 
-namespace Iam_api.Domain.Entities;
+namespace IamApi.Domain.Entities;
 
 public class Permission : BaseEntity
 {

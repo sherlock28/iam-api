@@ -2,6 +2,8 @@ using Mapster;
 using MapsterMapper;
 using SharpGrip.FluentValidation.AutoValidation.Mvc.Extensions;
 using Microsoft.Extensions.DependencyInjection;
+using Iam_api.Domain.Intefaces;
+using Iam_api.Application.Services;
 
 namespace IamApi.Application.Extensions;
 
@@ -19,5 +21,8 @@ public static class ServiceCollectionExtensions
 
 		// FluentValidation
 		services.AddFluentValidationAutoValidation();
+
+		// Custom Services
+		services.AddScoped<ITenantProvider, TenantProvider>();
 	}
 }

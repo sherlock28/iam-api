@@ -1,8 +1,9 @@
 using Mapster;
 using MapsterMapper;
-using SharpGrip.FluentValidation.AutoValidation.Mvc.Extensions;
+using DispatchR.Extensions;
 using Microsoft.Extensions.DependencyInjection;
-using IamApi.Domain.Intefaces;
+using SharpGrip.FluentValidation.AutoValidation.Mvc.Extensions;
+using IamApi.Domain.Interfaces;
 using IamApi.Application.Services;
 
 namespace IamApi.Application.Extensions;
@@ -12,6 +13,8 @@ public static class ServiceCollectionExtensions
 	public static void AddApplication(this IServiceCollection services)
 	{
 		var applicationAssembly = typeof(ServiceCollectionExtensions).Assembly;
+
+		services.AddDispatchR(cfg => cfg.Assemblies.Add(applicationAssembly));
 
 		// Mapster
 		var config = TypeAdapterConfig.GlobalSettings;
@@ -24,5 +27,6 @@ public static class ServiceCollectionExtensions
 
 		// Custom Services
 		services.AddScoped<ITenantProvider, TenantProvider>();
+		services.AddHttpContextAccessor();
 	}
 }

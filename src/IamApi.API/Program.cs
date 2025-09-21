@@ -1,8 +1,9 @@
-using Serilog;
-using Scalar.AspNetCore;
 using IamApi.API.Extensions;
+using IamApi.API.Middlewares;
 using IamApi.Application.Extensions;
 using IamApi.Infrastructure.Extensions;
+using Scalar.AspNetCore;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,14 +19,15 @@ builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
+app.UseSerilogRequestLogging();
+app.UseMiddleware<TenantMiddleware>();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 	app.MapScalarApiReference();
 }
-
-app.UseSerilogRequestLogging();
 
 app.UseExceptionHandler();
 

@@ -1,7 +1,7 @@
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore; 
 using IamApi.Domain.Entities;
-using IamApi.Domain.Intefaces;
+using IamApi.Domain.Interfaces;
 
 namespace IamApi.Infrastructure.Persistence;
 
@@ -101,7 +101,7 @@ public class IAMDbContext : DbContext
 
 		if (!_isMigration && _tenantProvider != null)
 		{
-			var tenantId = _tenantProvider.GetTenantId();
+			var tenantId = _tenantProvider.GetCurrentTenantId() ?? Guid.Empty;
 
 			foreach (var entityType in modelBuilder.Model.GetEntityTypes())
 		{
@@ -120,6 +120,28 @@ public class IAMDbContext : DbContext
 			}
 		}
 		}
+	}
+
+	public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+	{
+		var userId = Guid.CreateVersion7();
+
+		foreach (var entry in ChangeTracker.Entries<BaseEntity>())
+		{
+			if (entry.State == EntityState.Added)
+			{
+				entry.Entity.CreatedAt = DateTime.UtcNow;
+				entry.Entity.CreatedBy = userId;
+			}
+
+			if (entry.State == EntityState.Modified)
+			{
+				entry.Entity.LastModifiedByAt = DateTime.UtcNow;
+				entry.Entity.LastModifiedBy = userId;
+			}
+		}
+
+		return await base.SaveChangesAsync(cancellationToken);
 	}
 
 	private static LambdaExpression BuildTenantFilterExpression(Type entityType, Guid tenantId)

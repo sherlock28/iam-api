@@ -1,4 +1,4 @@
-namespace IamApi.Domain.Intefaces;
+namespace IamApi.Domain.Interfaces;
 
 public interface ISoftDelete
 {

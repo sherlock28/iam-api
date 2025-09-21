@@ -22,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IamApi.Migrations", "src\IamApi.Migrations\IamApi.Migrations.csproj", "{281A2D6D-96B5-4EC7-8FB3-6947EC30364A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{25103F98-9A68-8493-03E1-FB655B25CCC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25103F98-9A68-8493-03E1-FB655B25CCC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25103F98-9A68-8493-03E1-FB655B25CCC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{281A2D6D-96B5-4EC7-8FB3-6947EC30364A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{281A2D6D-96B5-4EC7-8FB3-6947EC30364A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{281A2D6D-96B5-4EC7-8FB3-6947EC30364A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{281A2D6D-96B5-4EC7-8FB3-6947EC30364A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

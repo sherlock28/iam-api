@@ -16,6 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
 		changelog.md = changelog.md
+		scripts\dbmigrate.py = scripts\dbmigrate.py
 		docker-compose.yml = docker-compose.yml
 		Dockerfile = Dockerfile
 		nuget.config = nuget.config
@@ -53,5 +54,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C7180CE-EA76-49F5-8723-F14C27F7C35B}
 	EndGlobalSection
 EndGlobal

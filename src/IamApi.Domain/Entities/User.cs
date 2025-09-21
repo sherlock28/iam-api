@@ -10,9 +10,13 @@ public class User : BaseEntity, ISoftDelete, IMultiTenant
 	public Guid? ServiceId { get; set; }
 
 	public string Email { get; set; } = default!;
+	public string NormalizedEmail { get; set; } = default!;
 	public string Username { get; set; } = default!;
+	public string NormalizedUsername { get; set; } = default!;
 	public string PasswordHash { get; set; } = default!;
-	public string? Salt { get; set; }
+	public DateTime LockoutEnd { get; set; } = default!;
+	public bool LockoutEnabled { get; set; } = false;
+	public int AccessFailedCount { get; set; } = default!;
 
 	public bool IsActive { get; set; } = true;
 	public bool IsDeleted { get; set; } = false;

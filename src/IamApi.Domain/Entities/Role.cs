@@ -10,6 +10,7 @@ public class Role : BaseEntity, IMultiTenant
 	public Guid? ServiceId { get; set; }
 
 	public string Name { get; set; } = default!;
+	public string NormalizedName { get; set; } = default!;
 	public string? Description { get; set; }
 
 	public List<RolePermission> RolePermissions { get; set; } = [];

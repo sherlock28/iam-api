@@ -5,6 +5,8 @@ namespace IamApi.Domain.Entities;
 public class User : BaseEntity, ISoftDelete, IMultiTenant
 {
 	public Guid OrganizationId { get; set; }
+	public Organization Organization { get; set; } = default!;
+
 	public Guid? ServiceId { get; set; }
 
 	public string Email { get; set; } = default!;

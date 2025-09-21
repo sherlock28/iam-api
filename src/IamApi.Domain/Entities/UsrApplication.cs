@@ -1,9 +1,8 @@
-using IamApi.Domain.Entities;
 using IamApi.Domain.Intefaces;
 
 namespace IamApi.Domain.Entities;
 
-public class Application : BaseEntity, ISoftDelete, IMultiTenant
+public class UsrApplication : BaseEntity, ISoftDelete, IMultiTenant
 {
 	public string Name { get; set; } = default!;
 
@@ -20,5 +19,5 @@ public class Application : BaseEntity, ISoftDelete, IMultiTenant
 	public string? ClientId { get; set; }
 	public string? ClientSecretHash { get; set; }
 
-	public List<ApplicationRole> ApplicationRoles { get; set; } = [];
+	public List<UsrApplicationRole> ApplicationRoles { get; set; } = [];
 }

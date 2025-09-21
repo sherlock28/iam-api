@@ -8,4 +8,3 @@ public class BaseEntity
 	public DateTime? LastModifiedByAt { get; set; }
 	public string? LastModifiedBy { get; set; }
 }
-

@@ -1,5 +1,3 @@
-using IamApi.Domain.Entities;
-
 namespace IamApi.Domain.Entities;
 
 public class UserRole : BaseEntity

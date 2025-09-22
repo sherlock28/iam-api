@@ -1,6 +1,5 @@
 using DispatchR.Abstractions.Send;
 using IamApi.Application.Users.Dtos.Response;
-using IamApi.Domain.Entities;
 using IamApi.Domain.Interfaces;
 using Mapster;
 using Microsoft.Extensions.Logging;

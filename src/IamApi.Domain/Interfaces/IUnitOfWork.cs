@@ -11,4 +11,5 @@ public interface IUnitOfWork
 
 	// Specific repositories
 	IUserRepository UsersRepository { get; }
+	IOrganizationRepository OrganizationRepository { get; }
 }

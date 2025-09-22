@@ -5,12 +5,13 @@ using Microsoft.EntityFrameworkCore.Storage;
 
 namespace IamApi.Infrastructure.Repositories;
 
-internal class UnitOfWork(IAMDbContext context, IUserRepository users) : IUnitOfWork
+internal class UnitOfWork(IAMDbContext context, IUserRepository usersRepo, IOrganizationRepository orgRepo) : IUnitOfWork
 {
 	private readonly IAMDbContext _context = context;
 	private IDbContextTransaction? _transaction;
 
-	public IUserRepository UsersRepository { get; } = users;
+	public IUserRepository UsersRepository { get; } = usersRepo;
+	public IOrganizationRepository OrganizationRepository { get; } = orgRepo;
 
 	public async Task BeginTransactionAsync(CancellationToken cancellationToken = default)
 	{

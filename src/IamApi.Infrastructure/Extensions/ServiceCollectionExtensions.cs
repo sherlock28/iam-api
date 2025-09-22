@@ -19,6 +19,7 @@ public static class ServiceCollectionExtensions
 
 		// Repositories
 		services.AddScoped<IUserRepository, UserRepository>();
+		services.AddScoped<IOrganizationRepository, OrganizationRepository>();
 		services.AddScoped<IUnitOfWork, UnitOfWork>();
 	}
 }

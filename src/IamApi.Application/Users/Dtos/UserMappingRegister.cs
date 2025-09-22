@@ -10,7 +10,7 @@ public class UserMappingRegister : IRegister
 	public void Register(TypeAdapterConfig config)
 	{
 		config.NewConfig<CreateUserCommand, User>()
-			.Map(dest => dest.Id, src => Guid.NewGuid())
+			.Map(dest => dest.Id, src => Guid.CreateVersion7())
 			.Map(dest => dest.OrganizationId, src => src.OrganizationId)
 			.Map(dest => dest.ServiceId, src => src.ServiceId)
 			.Map(dest => dest.Email, src => src.Email)

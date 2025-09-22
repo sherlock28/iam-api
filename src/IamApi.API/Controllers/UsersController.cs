@@ -17,7 +17,7 @@ public class UsersController(IMediator dispatchR) : ControllerBase
 
 		var userId = await dispatchR.Send(request, cancellationToken);
 
-		return CreatedAtAction(nameof(CreateUser), new { organizationId, userId }, null);
+		return CreatedAtAction(nameof(GetUserById), new { organizationId, userId }, null);
 	}
 
 	[HttpGet("{userId}", Name = "GetUserById")]

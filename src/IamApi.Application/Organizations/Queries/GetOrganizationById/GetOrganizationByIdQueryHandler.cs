@@ -17,7 +17,7 @@ public class GetOrganizationByIdQueryHandler(
 		var org = await unitOfWork.OrganizationRepository.GetOrganizationByIdAsync(request.organizationId);
 
 		if (org == null)
-			throw new KeyNotFoundException($"User with ID {request.organizationId} was not found");
+			throw new KeyNotFoundException($"Organization with ID {request.organizationId} was not found");
 
 		var orgDto = org.Adapt<GetOrganizationByIdResponseDto>();
 

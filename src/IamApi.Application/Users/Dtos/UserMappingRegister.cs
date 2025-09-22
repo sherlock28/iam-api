@@ -26,16 +26,6 @@ public class UserMappingRegister : IRegister
 			.Map(dest => dest.UserRoles, src => new List<UserRole>())
 			.Map(dest => dest.UserServices, src => new List<UserService>());
 
-		config.NewConfig<User, GetUserByIdResponseDto>()
-			.Map(dest => dest.Id, src => src.Id)
-			.Map(dest => dest.OrganizationId, src => src.OrganizationId)
-			.Map(dest => dest.ServiceId, src => src.ServiceId)
-			.Map(dest => dest.Email, src => src.Email)
-			.Map(dest => dest.Username, src => src.Username)
-			.Map(dest => dest.IsActive, src => src.IsActive)
-			.Map(dest => dest.CreatedBy, src => src.CreatedBy)
-			.Map(dest => dest.CreatedAt, src => src.CreatedAt)
-			.Map(dest => dest.LastModifiedBy, src => src.LastModifiedBy)
-			.Map(dest => dest.LastModifiedByAt, src => src.LastModifiedByAt);
+		config.NewConfig<User, GetUserByIdResponseDto>();
 	}
 }

@@ -14,11 +14,11 @@ public class TenantMiddleware
 	public async Task InvokeAsync(HttpContext context)
 	{
 		// Only check organizationId if the path actually contains it
-		if (context.Request.Path.StartsWithSegments("/api/organizations") && 
+		if (context.Request.Path.StartsWithSegments("/api/organizations") &&
 		    context.Request.RouteValues.ContainsKey("organizationId"))
 		{
-			var orgId = context.Request.RouteValues["organizationId"]?.ToString();
-			if (string.IsNullOrEmpty(orgId))
+			var organizationId = context.Request.RouteValues["organizationId"]?.ToString();
+			if (string.IsNullOrEmpty(organizationId))
 			{
 				var problemDetails = new ProblemDetails
 				{

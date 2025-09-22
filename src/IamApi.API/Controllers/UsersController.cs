@@ -1,7 +1,8 @@
 using DispatchR;
-using Microsoft.AspNetCore.Mvc;
 using IamApi.Application.Users.Commands.CreateUser;
+using IamApi.Application.Users.Dtos.Response;
 using IamApi.Application.Users.Queries.GetUserById;
+using Microsoft.AspNetCore.Mvc;
 
 namespace IamApi.API.Controllers;
 
@@ -20,7 +21,7 @@ public class UsersController(IMediator dispatchR) : ControllerBase
 	}
 
 	[HttpGet("{userId}", Name = "GetUserById")]
-	public async Task<IActionResult> GetUserById([FromRoute] Guid organizationId, [FromRoute] Guid userId, CancellationToken cancellationToken)
+	public async Task<ActionResult<GetUserByIdResponseDto>> GetUserById([FromRoute] Guid organizationId, [FromRoute] Guid userId, CancellationToken cancellationToken)
 	{
 		var user = await dispatchR.Send(new GetUserByIdQuery(organizationId,userId), cancellationToken);
 

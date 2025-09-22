@@ -12,12 +12,12 @@ public class GetOrganizationByIdQueryHandler(
 {
 	public async Task<GetOrganizationByIdResponseDto> Handle(GetOrganizationByIdQuery request, CancellationToken cancellationToken)
 	{
-		logger.LogDebug("Getting Organization with ID: {OrganizationId}", request.orgId);
+		logger.LogDebug("Getting Organization with ID: {OrganizationId}", request.organizationId);
 
-		var org = await unitOfWork.OrganizationRepository.GetOrganizationByIdAsync(request.orgId);
+		var org = await unitOfWork.OrganizationRepository.GetOrganizationByIdAsync(request.organizationId);
 
 		if (org == null)
-			throw new KeyNotFoundException($"User with ID {request.orgId} was not found");
+			throw new KeyNotFoundException($"User with ID {request.organizationId} was not found");
 
 		var orgDto = org.Adapt<GetOrganizationByIdResponseDto>();
 

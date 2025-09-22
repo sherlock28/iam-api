@@ -22,7 +22,7 @@ public class CreateOrganizationCommandHandler(
 
 		await unitOfWork.CommitTransactionAsync(cancellationToken);
 
-		logger.LogInformation("Organization created successfully with ID: {OrgId}", org.Id);
+		logger.LogInformation("Organization created successfully with ID: {organizationId}", org.Id);
 
 		return org.Id;
 	}

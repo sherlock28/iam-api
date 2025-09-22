@@ -14,10 +14,10 @@ internal class OrganizationRepository(IAMDbContext context) : IOrganizationRepos
 		await _context.Organizations.AddAsync(org, cancellationToken);
 	}
 
-	public async Task<Organization?> GetOrganizationByIdAsync(Guid orgId, CancellationToken cancellationToken = default)
+	public async Task<Organization?> GetOrganizationByIdAsync(Guid organizationId, CancellationToken cancellationToken = default)
 	{
 		var org = await _context.Organizations
-			.FirstOrDefaultAsync(o => o.Id == orgId, cancellationToken);
+			.FirstOrDefaultAsync(o => o.Id == organizationId, cancellationToken);
 
 		return org;
 	}

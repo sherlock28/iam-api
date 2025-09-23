@@ -17,7 +17,7 @@ public class UserMappingRegister : IRegister
 			.Map(dest => dest.NormalizedEmail, src => src.Email.ToUpperInvariant())
 			.Map(dest => dest.Username, src => src.Username)
 			.Map(dest => dest.NormalizedUsername, src => src.Username.ToUpperInvariant())
-			.Map(dest => dest.PasswordHash, src => src.Password) // TODO: Implement proper password hashing
+			.Map(dest => dest.PasswordHash, src => BCrypt.Net.BCrypt.HashPassword(src.Password))
 			.Map(dest => dest.IsActive, src => true)
 			.Map(dest => dest.IsDeleted, src => false)
 			.Map(dest => dest.LockoutEnabled, src => false)

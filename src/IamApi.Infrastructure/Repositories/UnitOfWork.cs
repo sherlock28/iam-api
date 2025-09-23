@@ -9,7 +9,8 @@ internal class UnitOfWork(
 	IAMDbContext context,
 	IUserRepository usersRepo,
 	IOrganizationRepository orgRepo,
-	IRoleRepository roleRepo) : IUnitOfWork
+	IRoleRepository roleRepo,
+	IAppServiceRepository appServiceRepo) : IUnitOfWork
 {
 	private readonly IAMDbContext _context = context;
 	private IDbContextTransaction? _transaction;
@@ -17,6 +18,7 @@ internal class UnitOfWork(
 	public IUserRepository UsersRepository { get; } = usersRepo;
 	public IOrganizationRepository OrganizationRepository { get; } = orgRepo;
 	public IRoleRepository RoleRepository { get; } = roleRepo;
+	public IAppServiceRepository AppServiceRepository { get; } = appServiceRepo;
 
 	public async Task BeginTransactionAsync(CancellationToken cancellationToken = default)
 	{

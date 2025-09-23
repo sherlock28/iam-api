@@ -21,6 +21,7 @@ public static class ServiceCollectionExtensions
 		services.AddScoped<IUserRepository, UserRepository>();
 		services.AddScoped<IOrganizationRepository, OrganizationRepository>();
 		services.AddScoped<IRoleRepository, RoleRepository>();
+		services.AddScoped<IAppServiceRepository, AppServiceRepository>();
 		services.AddScoped<IUnitOfWork, UnitOfWork>();
 	}
 }

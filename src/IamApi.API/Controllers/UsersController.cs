@@ -23,7 +23,7 @@ public class UsersController(IMediator dispatchR) : ControllerBase
 	[HttpGet("{userId}", Name = "GetUserById")]
 	public async Task<ActionResult<GetUserByIdResponseDto>> GetUserById([FromRoute] Guid organizationId, [FromRoute] Guid userId, CancellationToken cancellationToken)
 	{
-		var user = await dispatchR.Send(new GetUserByIdQuery(organizationId,userId), cancellationToken);
+		var user = await dispatchR.Send(new GetUserByIdQuery(organizationId, userId), cancellationToken);
 
 		return Ok(user);
 	}

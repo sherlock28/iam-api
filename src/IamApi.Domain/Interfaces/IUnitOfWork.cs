@@ -13,4 +13,5 @@ public interface IUnitOfWork
 	IUserRepository UsersRepository { get; }
 	IOrganizationRepository OrganizationRepository { get; }
 	IRoleRepository RoleRepository { get; }
+	IAppServiceRepository AppServiceRepository { get; }
 }
